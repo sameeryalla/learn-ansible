@@ -16,3 +16,15 @@
       vars:
         url: tasks.example.com
 #only task can access variable in above code
+
+
+#load vars from file
+- name: load vars from file
+  hosts: all
+  vars_files:
+    - exvars.yml
+  tasks:
+    - name: print url
+      ansible.builtin.debug:
+        msg: URL - {{url}}
+
