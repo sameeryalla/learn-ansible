@@ -4,3 +4,11 @@
    - name: print Hello World
      ansible.builtin.debug:
        msg: Hello World
+
+
+#load variables from roles:
+- name: variable from role1
+  hosts: all
+  roles:
+    - sample
+    - sample2
