@@ -28,3 +28,9 @@
       ansible.builtin.debug:
         msg: URL - {{url}}
 
+#load variables from roles:
+- name: variable from role1
+  hosts: all
+  roles:
+    - sample
+    - sample2
