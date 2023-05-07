@@ -28,4 +28,16 @@
       ansible.builtin.debug:
         msg: URL - {{url}}
 
+#load variables from roles:
+- name: variable from role1
+  hosts: all
+  roles:
+    - sample
+    - sample2
 
+#shell command from ansible
+- name : Demo on register variable
+  hosts: all
+  tasks:
+    - name: run uptime shell command
+      ansible.builtin.shell: uptime

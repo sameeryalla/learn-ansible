@@ -2,3 +2,10 @@
   hosts: all
   roles:
     - sample
+
+#load variables from roles:
+- name: variable from role1
+  hosts: all
+  roles:
+    - sample
+    - sample2
