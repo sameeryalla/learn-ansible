@@ -1,0 +1,7 @@
+- name: Demo on facts
+  hosts: localhost
+  connection: local
+  tasks:
+    - name : print fact
+      ansible.builtin.debug:
+        msg: Arch - {{ ansible_architecture }}
